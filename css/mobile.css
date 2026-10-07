@@ -1,0 +1,193 @@
+/* CSS DÀNH CHO MOBILE */
+@media (max-width: 768px) {
+
+    /* Container */
+    .container {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    /* Phần đầu trang */
+    .hero img {
+        height: 260px;
+    }
+
+    .hero-content {
+        top: 35%;
+        white-space: nowrap;
+    }
+
+    .hero-content div:first-child {
+        font-size: 28px !important;
+    }
+
+    /* Thanh menu */
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        padding: 8px 16px;
+    }
+
+    .main-nav a {
+        display: block;
+        text-align: left;
+        margin: 0;
+        padding: 10px 8px;
+        line-height: 1.4;
+        border: 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-profile {
+        display: none;
+    }
+
+    /* Phần giới thiệu */
+    .intro-section {
+        display: block;
+    }
+
+    .career-objective,
+    .personal-info {
+        padding: 28px 20px;
+    }
+
+    .section-title h3 {
+        font-size: 22px;
+    }
+
+    /* Phần kinh nghiệm */
+    .experience-section {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 28px auto;
+    }
+
+    .experience-column {
+        display: contents;
+    }
+
+    .experience-section .experience-column:first-child .experience-card:nth-child(1) { order: 1; }
+.experience-section .experience-column:first-child .experience-card:nth-child(2) { order: 2; }
+.experience-section .experience-column:first-child .experience-card:nth-child(3) { order: 3; }
+.experience-section .experience-column:last-child .experience-card:nth-child(1) { order: 4; }
+.experience-section .experience-column:last-child .experience-card:nth-child(2) { order: 5; }
+.experience-section .experience-column:last-child .experience-card:nth-child(3) { order: 6; }
+
+    .experience-card {
+        padding: 28px 18px;
+        margin-bottom: 18px;
+    }
+
+    .section-heading {
+        grid-template-columns: 1fr auto;
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .experience-section li {
+        margin-bottom: 24px;
+    }
+
+    /* Phần sở thích */
+    .hobby-value > div {
+        width: 48px;
+        height: 48px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 48px;
+        font-size: 20px !important;
+        padding: 0 !important;
+    }
+
+    /* Phần chứng chỉ */
+    .certificates {
+        width: 90%;
+    }
+
+    .certificate-list {
+        display: block;
+        border-bottom: 0;
+    }
+
+    .certificate-item {
+        display: block;
+        padding: 18px 0;
+        position: relative;
+        border-bottom: 0;
+    }
+
+    .certificate-item::after {
+        content: "";
+        position: absolute;
+        left: -14px;
+        right: -14px;
+        bottom: 0;
+        border-bottom: 1px solid #e99;
+    }
+
+    .certificate-list-secondary .certificate-item:last-child {
+        border-bottom: 0;
+    }
+
+    .certificate-list-secondary .certificate-item:last-child::after {
+        display: none;
+    }
+
+    .certificate-image img {
+        width: 100%;
+        height: auto;
+        border-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .certificate-list-secondary .certificate-image {
+        width: 100% !important;
+    }
+
+    .certificate-content {
+        margin: 0;
+    }
+
+    /* Phần dự án */
+    .project-section {
+        width: 90%;
+    }
+
+    .project-list {
+        display: block;
+    }
+
+    .project-card {
+        margin: 24px 0;
+    }
+
+    .project-content {
+        grid-template-rows: auto;
+    }
+
+    .project-detail {
+        grid-template-columns: minmax(0, 56px) minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    /* Phần mạng xã hội */
+    .social-section {
+        gap: 0 !important;
+    }
+
+    .social-section a {
+        font-size: 200%;
+    }
+
+    .social-section a span {
+        display: none;
+    }
+
+}
+

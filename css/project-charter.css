@@ -1,0 +1,313 @@
+/* Cài đặt chung */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #202b35;
+    font: 15px Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/* Phần Project Charter */
+.charter {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+/* Phần đầu trang */
+.page-header {
+    margin-bottom: 22px;
+}
+
+.page-header > a,
+footer a {
+    color: #1717ff;
+    text-decoration: none;
+}
+
+.page-header h1 {
+    margin: 12px 0 2px;
+    color: #1717ff;
+}
+
+.page-header p {
+    margin: 0;
+    color: #63717d;
+}
+
+/* Phần nội dung chính */
+.board {
+    display: grid;
+    grid-template-columns: 1.25fr 1.25fr 0.82fr 1.05fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 10px;
+    background: #1717ff;
+    box-shadow: 0 3px 8px #777;
+}
+
+/* Phần panel */
+.panel {
+    background: #eef7ff;
+    padding: 18px 20px;
+    min-width: 0;
+}
+
+.panel h2 {
+    font-size: 22px;
+    color: #1717ff;
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #c7d9dc;
+}
+
+/* Vị trí các khu vực */
+.goals {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.team {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+
+.timeline {
+    grid-column: 4;
+    grid-row: 1 / 3;
+}
+
+.scopes {
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+
+.primary {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/* Phần thông tin */
+.goal,
+.person,
+.milestone,
+.primary article {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: start;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid #d8e5e9;
+}
+
+.goal:last-child,
+.person:last-child,
+.milestone:last-child {
+    border-bottom: 0;
+}
+
+.symbol {
+    text-align: center;
+    font-size: 21px;
+}
+
+.panel h3 {
+    font-size: 14px;
+    margin: 0 0 3px;
+}
+
+.panel p {
+    font-size: 13px;
+    margin: 0;
+    color: #344453;
+}
+
+/* Phần Scopes */
+.scope-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.scope-columns h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.scope-columns p {
+    margin-bottom: 12px;
+}
+
+/* Phần Timeline */
+.milestone {
+    grid-template-columns: 48px 1fr;
+}
+
+.number {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #a884ff;
+    border: 1px solid #777;
+    color: white;
+    font-size: 16px;
+}
+
+.milestone h3 {
+    margin: 3px 0 4px;
+}
+
+.timeline .milestone {
+    border-bottom: 1px dotted #42bde0;
+}
+
+/* Phần Primary */
+.primary article {
+    grid-template-columns: 28px 1fr;
+    border: 0;
+}
+
+.primary .symbol {
+    font-size: 19px;
+}
+
+/* Phần Footer */
+footer {
+    text-align: center;
+    padding: 18px;
+    color: #64717a;
+    font-size: 13px;
+}
+
+/* Tablet */
+@media (max-width: 850px) {
+    .board {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .goals {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .team {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .timeline {
+        grid-column: 2;
+        grid-row: span 2;
+    }
+
+    .scopes {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .primary {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .charter {
+        margin: 18px auto;
+        padding: 0 12px;
+    }
+
+    .board {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+
+    .scope-columns {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .goal,
+    .person {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 4px;
+    }
+
+    .milestone {
+        grid-template-columns: 48px 1fr;
+    }
+
+    .panel h2 {
+        font-size: 21px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .board {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .panel {
+        width: 100%;
+    }
+
+    .scope-columns {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .goals {
+        order: 1;
+    }
+
+    .scopes {
+        order: 2;
+    }
+
+    .team {
+        order: 3;
+    }
+
+    .primary {
+        order: 4;
+    }
+
+    .timeline {
+        order: 5;
+    }
+
+    .goal,
+    .person {
+        text-align: left;
+    }
+
+    .goal .symbol,
+    .person .symbol {
+        text-align: center;
+    }
+
+    .milestone {
+        grid-template-columns: 1fr;
+    }
+
+    .number {
+        margin-bottom: 2px;
+    }
+}

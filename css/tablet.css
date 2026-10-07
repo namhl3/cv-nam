@@ -1,0 +1,125 @@
+/* CSS DÀNH CHO TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Container */
+    .container {
+        width: 100%;
+    }
+
+    /* Thanh menu */
+    .nav-profile {
+        width: 8%;
+    }
+
+    .nav-profile img {
+        display: none;
+    }
+
+    .main-nav a {
+        padding: 0 22px;
+    }
+
+    /* Phần giới thiệu */
+    .intro-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .career-objective,
+    .personal-info {
+        padding: 34px 28px;
+    }
+
+    /* Phần kinh nghiệm */
+    .experience-section {
+        width: 88%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        align-items: start;
+    }
+
+    .experience-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .experience-card {
+        padding: 32px 18px;
+    }
+
+    /* Put each heading icon above and to the right of its title. */
+    .section-heading {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 40px auto;
+        align-items: start;
+        font-size: 22px;
+        margin-bottom: 28px;
+    }
+
+    .section-heading > span {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .section-heading > div {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        line-height: 1;
+    }
+
+    /* Phần chứng chỉ */
+    .certificates {
+        width: 88%;
+    }
+
+    .certificate-list {
+        gap: 24px;
+    }
+
+    .certificate-item {
+        grid-template-columns: minmax(130px, 1fr);
+        gap: 6px;
+    }
+
+    .certificate-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .certificate-content {
+        margin: 0;
+    }
+
+    /* Phần dự án */
+    .project-section {
+        width: 88%;
+    }
+
+    .project-list {
+        gap: 16px;
+    }
+
+    .project-content {
+        grid-template-rows: auto;
+    }
+
+    .project-detail {
+        grid-template-columns: minmax(0, 56px) minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    /* Phần sở thích */
+    .hobby-value > div {
+        width: 48px;
+        height: 48px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 48px;
+        font-size: 20px !important;
+        padding: 0 !important;
+    }
+
+}
